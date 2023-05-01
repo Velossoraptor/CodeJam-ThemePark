@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 
 public class Character implements KeyListener{
     private static ImageIcon sprite = new ImageIcon("src/sprite.png");
@@ -10,7 +11,7 @@ public class Character implements KeyListener{
 
     public Character(String newName, JPanel currentPanel){
         this.name=newName;
-        currentPanel.add(this);
+        currentPanel.add(this); //probably move to a different class/function
     }
 
     //Change Methods
@@ -38,5 +39,23 @@ public class Character implements KeyListener{
 
     public int getLives(){
         return this.lives;
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'keyTyped'");
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'keyPressed'");
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'keyReleased'");
     }
 }
