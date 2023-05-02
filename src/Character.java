@@ -9,9 +9,9 @@ public class Character implements KeyListener{
     private int lives = 3;
     private int x, y;
 
-    public Character(String newName, JPanel currentPanel){
+    public Character(String newName){
         this.name=newName;
-        currentPanel.add(this); //probably move to a different class/function
+        //currentPanel.add(this); //probably move to a different class/function
     }
 
     //Change Methods
@@ -41,6 +41,8 @@ public class Character implements KeyListener{
         return this.lives;
     }
 
+
+    //KeyListener Methods for movement
     @Override
     public void keyTyped(KeyEvent e) {
         // TODO Auto-generated method stub
